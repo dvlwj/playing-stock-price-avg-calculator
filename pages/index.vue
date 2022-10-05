@@ -62,7 +62,7 @@ export default{
       const runningTotal = isNaN(this.runningTotal) ? 0 : this.runningTotal
       const buyLot = isNaN(this.buyLot) ? 0 : this.buyLot
       const estimated = ((totalBought + runningTotal) / (lot + buyLot)) / 100
-      this.estimate = isNaN(estimated) ? 0 : estimated
+      this.estimate = isNaN(estimated) ? 0 : estimated.toFixed(2)
       this.avg = isNaN(avg) ? 0 : avg
     },
     lot() {
@@ -75,7 +75,7 @@ export default{
       const runningTotal = isNaN(this.runningTotal) ? 0 : this.runningTotal
       const profitLoss = (runningPrice - bought) * lot * 100
       const estimated = ((totalBought + runningTotal) / (lot + buyLot)) / 100
-      this.estimate = isNaN(estimated) ? 0 : estimated
+      this.estimate = isNaN(estimated) ? 0 : estimated.toFixed(2)
       this.profitLoss = isNaN(profitLoss) ? 0 : profitLoss
       this.avg = isNaN(avg) ? 0 : avg
     },
@@ -98,7 +98,7 @@ export default{
       const runningPrice = isNaN(this.runningPrice) ? 0 : this.runningPrice
       const runningTotal = (runningPrice * buyLot * 100)
       const estimated = ((totalBought + runningTotal) / (lot + buyLot)) / 100
-      this.estimate = isNaN(estimated) ? 0 : estimated
+      this.estimate = isNaN(estimated) ? 0 : estimated.toFixed(2)
       this.runningTotal = isNaN(runningTotal) ? 0 : runningTotal
     },
     runningTotal() {
@@ -107,7 +107,7 @@ export default{
       const runningTotal = isNaN(this.runningTotal) ? 0 : this.runningTotal
       const totalBought = isNaN(this.totalBought) ? 0 : this.totalBought
       const estimated = ((totalBought + runningTotal) / (lot + buyLot)) / 100
-      this.estimate = isNaN(estimated) ? 0 : estimated
+      this.estimate = isNaN(estimated) ? 0 : estimated.toFixed(2)
     }
   },
   methods: {
