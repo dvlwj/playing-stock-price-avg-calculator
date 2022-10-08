@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div>
+    <van-row gutter="20">
       <h1 class="title">Calculator</h1>
       <van-button
         type="danger"
@@ -53,11 +53,13 @@
         readonly
         disabled
       />
-    </div>
+    </van-row>
   </div>
 </template>
 
 <script>
+import { Toast } from 'vant';
+
 export default {
   data() {
     return {
@@ -72,6 +74,13 @@ export default {
       profitLoss: 0,
       estimate: 0,
     }
+  },
+  mounted() {
+    Toast.loading({
+      message: 'Loading...',
+      forbidClick: true,
+      loadingType: 'spinner',
+    })
   },
   watch: {
     bought() {
