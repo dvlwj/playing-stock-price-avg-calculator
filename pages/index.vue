@@ -20,9 +20,9 @@
           <van-field v-model="runningTotal" label="Running Total"  readonly/>
         </van-col>
       </van-row>
-      <van-field v-model="gainLoss" label="Percentage Gain/Loss"  readonly/>
-      <van-field v-model="profitLoss" label="Total Profit/Loss"  readonly/>
-      <van-field v-model="estimate" label="Estimated New Total Stocks AVG"  readonly/>
+      <van-field v-model="gainLoss" label="Percentage Gain/Loss"  readonly disabled/>
+      <van-field v-model="profitLoss" label="Total Profit/Loss"  readonly disabled/>
+      <van-field v-model="estimate" label="Estimated New Total Stocks AVG"  readonly disabled/>
     </div>
   </div>
 </template>
