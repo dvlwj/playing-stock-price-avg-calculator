@@ -79,6 +79,7 @@ export default {
     Toast.loading({
       message: 'Loading...',
       forbidClick: true,
+      loadingType: 'spinner',
     })
   },
   watch: {
