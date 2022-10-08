@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div>
+    <van-space direction="vertical" fill>
       <h1 class="title">Calculator</h1>
       <van-button
         type="danger"
@@ -53,7 +53,7 @@
         readonly
         disabled
       />
-    </div>
+    </van-space>
   </div>
 </template>
 
