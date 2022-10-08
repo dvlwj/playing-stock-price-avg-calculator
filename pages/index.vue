@@ -58,6 +58,8 @@
 </template>
 
 <script>
+import { Toast } from 'vant';
+
 export default {
   data() {
     return {
@@ -72,6 +74,12 @@ export default {
       profitLoss: 0,
       estimate: 0,
     }
+  },
+  mounted() {
+    Toast.loading({
+      message: 'Loading...',
+      forbidClick: true,
+    })
   },
   watch: {
     bought() {
